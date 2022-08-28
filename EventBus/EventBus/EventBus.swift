@@ -22,13 +22,10 @@ public struct EventBus {
     public func publish<E: Event>(_ event: E) {
         operationQueue.sync {
             for (_, subscriberPairs) in subscriptions {
-                for (eventKey, handler) in subscriberPairs where handler is EventHandler<E> {
-                    let key = keyForEventType(type(of: event))
-                    if eventKey == key {
-                        let handler = handler as! EventHandler<E>
-                        handler.handleQueue.async {
-                            handler.action?(event)
-                        }
+                let eventType = keyForEventType(type(of: event))
+                if let handler = subscriberPairs[eventType] as? EventHandler<E> {
+                    handler.handleQueue.async {
+                        handler.action?(event)
                     }
                 }
             }
