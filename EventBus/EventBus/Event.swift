@@ -10,3 +10,13 @@ import Foundation
 public protocol Event {
     
 }
+
+public protocol Cancellable {
+    var isCanceled: Bool { get set }
+}
+
+public extension Cancellable {
+    mutating func cancel() {
+        isCanceled = true
+    }
+}

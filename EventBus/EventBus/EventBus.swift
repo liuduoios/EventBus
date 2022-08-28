@@ -24,6 +24,9 @@ public struct EventBus {
             for (_, subscriberPairs) in subscriptions {
                 let eventType = keyForEventType(type(of: event))
                 if let handler = subscriberPairs[eventType] as? EventHandler<E> {
+                    if event is Cancellable {
+                        if (event as! Cancellable).isCanceled { return }
+                    }
                     handler.handleQueue.async {
                         handler.action?(event)
                     }

@@ -32,4 +32,15 @@ class PublisherViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func postCancellableEvent(_ sender: Any) {
+        var event = CancellableEvent()
+        event.cancel()
+        DispatchQueue.global(qos: .userInitiated).async {
+            EventBus.shared.publish(event)
+            DispatchQueue.main.async {
+                self.dismiss(animated: true)
+            }
+        }
+    }
 }

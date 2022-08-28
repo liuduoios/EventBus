@@ -27,6 +27,11 @@ class ViewController: UIViewController {
                 self.subscriberThreadLabel.text = currentThreadInfo
             }
         }
+        
+        EventBus.shared.subscribe(CancellableEvent.self, for: self) { [unowned self] event in
+            self.publisherThreadLabel.text = event.isCanceled.description
+            self.subscriberThreadLabel.text = Thread.current.description
+        }
     }
 
     deinit {

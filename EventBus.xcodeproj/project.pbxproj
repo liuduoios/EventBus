@@ -10,8 +10,8 @@
 		862F20A428BB63CA00C74422 /* PublisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F20A328BB63CA00C74422 /* PublisherViewController.swift */; };
 		862F20A628BB651900C74422 /* NormalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F20A528BB651900C74422 /* NormalEvent.swift */; };
 		86647B8E28BB8AC200448A39 /* BackgroundEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86647B8D28BB8AC200448A39 /* BackgroundEvent.swift */; };
+		86647B9028BB951D00448A39 /* CancellableEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86647B8F28BB951D00448A39 /* CancellableEvent.swift */; };
 		86F8285F28B36C7A00C6C52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8285E28B36C7A00C6C52F /* AppDelegate.swift */; };
-		86F8286128B36C7A00C6C52F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8286028B36C7A00C6C52F /* SceneDelegate.swift */; };
 		86F8286328B36C7A00C6C52F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8286228B36C7A00C6C52F /* ViewController.swift */; };
 		86F8286628B36C7A00C6C52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F8286428B36C7A00C6C52F /* Main.storyboard */; };
 		86F8286828B36C7B00C6C52F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F8286728B36C7B00C6C52F /* Assets.xcassets */; };
@@ -24,9 +24,9 @@
 		862F20A328BB63CA00C74422 /* PublisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherViewController.swift; sourceTree = "<group>"; };
 		862F20A528BB651900C74422 /* NormalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalEvent.swift; sourceTree = "<group>"; };
 		86647B8D28BB8AC200448A39 /* BackgroundEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEvent.swift; sourceTree = "<group>"; };
+		86647B8F28BB951D00448A39 /* CancellableEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableEvent.swift; sourceTree = "<group>"; };
 		86F8285B28B36C7A00C6C52F /* EventBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F8285E28B36C7A00C6C52F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86F8286028B36C7A00C6C52F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		86F8286228B36C7A00C6C52F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86F8286528B36C7A00C6C52F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86F8286728B36C7B00C6C52F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,11 +77,11 @@
 			children = (
 				862F20A228BB62D500C74422 /* EventBus */,
 				86F8285E28B36C7A00C6C52F /* AppDelegate.swift */,
-				86F8286028B36C7A00C6C52F /* SceneDelegate.swift */,
 				86F8286228B36C7A00C6C52F /* ViewController.swift */,
 				862F20A328BB63CA00C74422 /* PublisherViewController.swift */,
 				862F20A528BB651900C74422 /* NormalEvent.swift */,
 				86647B8D28BB8AC200448A39 /* BackgroundEvent.swift */,
+				86647B8F28BB951D00448A39 /* CancellableEvent.swift */,
 				86F8286428B36C7A00C6C52F /* Main.storyboard */,
 				86F8286728B36C7B00C6C52F /* Assets.xcassets */,
 				86F8286928B36C7B00C6C52F /* LaunchScreen.storyboard */,
@@ -167,8 +167,8 @@
 				86F8287328B36C8300C6C52F /* EventBus.swift in Sources */,
 				862F20A628BB651900C74422 /* NormalEvent.swift in Sources */,
 				86F8285F28B36C7A00C6C52F /* AppDelegate.swift in Sources */,
+				86647B9028BB951D00448A39 /* CancellableEvent.swift in Sources */,
 				86F8287728B36D2400C6C52F /* Event.swift in Sources */,
-				86F8286128B36C7A00C6C52F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
