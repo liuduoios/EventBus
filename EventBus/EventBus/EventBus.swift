@@ -1,6 +1,6 @@
 //
 //  EventBus.swift
-//  SwiftInfrastructureKit
+//  EventBus
 //
 //  Created by liuduo on 2022/7/21.
 //
