@@ -22,7 +22,7 @@
 
 ```swift
 struct XXXEvent: Event {
-
+    var info: String
 }
 ```
 
