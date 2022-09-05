@@ -11,6 +11,7 @@
 		862F20A628BB651900C74422 /* NormalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F20A528BB651900C74422 /* NormalEvent.swift */; };
 		86647B8E28BB8AC200448A39 /* BackgroundEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86647B8D28BB8AC200448A39 /* BackgroundEvent.swift */; };
 		86647B9028BB951D00448A39 /* CancellableEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86647B8F28BB951D00448A39 /* CancellableEvent.swift */; };
+		8680334128C609B20076298B /* EventBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8680334028C609B20076298B /* EventBusTests.swift */; };
 		86F8285F28B36C7A00C6C52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8285E28B36C7A00C6C52F /* AppDelegate.swift */; };
 		86F8286328B36C7A00C6C52F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8286228B36C7A00C6C52F /* ViewController.swift */; };
 		86F8286628B36C7A00C6C52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F8286428B36C7A00C6C52F /* Main.storyboard */; };
@@ -20,11 +21,23 @@
 		86F8287728B36D2400C6C52F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8287628B36D2400C6C52F /* Event.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8680334228C609B20076298B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86F8285328B36C7A00C6C52F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86F8285A28B36C7A00C6C52F;
+			remoteInfo = EventBus;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		862F20A328BB63CA00C74422 /* PublisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherViewController.swift; sourceTree = "<group>"; };
 		862F20A528BB651900C74422 /* NormalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalEvent.swift; sourceTree = "<group>"; };
 		86647B8D28BB8AC200448A39 /* BackgroundEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEvent.swift; sourceTree = "<group>"; };
 		86647B8F28BB951D00448A39 /* CancellableEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableEvent.swift; sourceTree = "<group>"; };
+		8680333E28C609B20076298B /* EventBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8680334028C609B20076298B /* EventBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusTests.swift; sourceTree = "<group>"; };
 		86F8285B28B36C7A00C6C52F /* EventBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F8285E28B36C7A00C6C52F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F8286228B36C7A00C6C52F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8680333B28C609B20076298B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86F8285828B36C7A00C6C52F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +76,19 @@
 			path = EventBus;
 			sourceTree = "<group>";
 		};
+		8680333F28C609B20076298B /* EventBusTests */ = {
+			isa = PBXGroup;
+			children = (
+				8680334028C609B20076298B /* EventBusTests.swift */,
+			);
+			path = EventBusTests;
+			sourceTree = "<group>";
+		};
 		86F8285228B36C7A00C6C52F = {
 			isa = PBXGroup;
 			children = (
 				86F8285D28B36C7A00C6C52F /* EventBus */,
+				8680333F28C609B20076298B /* EventBusTests */,
 				86F8285C28B36C7A00C6C52F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				86F8285B28B36C7A00C6C52F /* EventBus.app */,
+				8680333E28C609B20076298B /* EventBusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +123,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8680333D28C609B20076298B /* EventBusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8680334628C609B20076298B /* Build configuration list for PBXNativeTarget "EventBusTests" */;
+			buildPhases = (
+				8680333A28C609B20076298B /* Sources */,
+				8680333B28C609B20076298B /* Frameworks */,
+				8680333C28C609B20076298B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8680334328C609B20076298B /* PBXTargetDependency */,
+			);
+			name = EventBusTests;
+			productName = EventBusTests;
+			productReference = 8680333E28C609B20076298B /* EventBusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		86F8285A28B36C7A00C6C52F /* EventBus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86F8286F28B36C7B00C6C52F /* Build configuration list for PBXNativeTarget "EventBus" */;
@@ -120,6 +168,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					8680333D28C609B20076298B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 86F8285A28B36C7A00C6C52F;
+					};
 					86F8285A28B36C7A00C6C52F = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -139,11 +191,19 @@
 			projectRoot = "";
 			targets = (
 				86F8285A28B36C7A00C6C52F /* EventBus */,
+				8680333D28C609B20076298B /* EventBusTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8680333C28C609B20076298B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86F8285928B36C7A00C6C52F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +217,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8680333A28C609B20076298B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8680334128C609B20076298B /* EventBusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86F8285728B36C7A00C6C52F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +241,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8680334328C609B20076298B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86F8285A28B36C7A00C6C52F /* EventBus */;
+			targetProxy = 8680334228C609B20076298B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		86F8286428B36C7A00C6C52F /* Main.storyboard */ = {
@@ -194,6 +270,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8680334428C609B20076298B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.liuduoios.EventBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventBus.app/EventBus";
+			};
+			name = Debug;
+		};
+		8680334528C609B20076298B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.liuduoios.EventBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EventBus.app/EventBus";
+			};
+			name = Release;
+		};
 		86F8286D28B36C7B00C6C52F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -365,6 +477,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8680334628C609B20076298B /* Build configuration list for PBXNativeTarget "EventBusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8680334428C609B20076298B /* Debug */,
+				8680334528C609B20076298B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		86F8285628B36C7A00C6C52F /* Build configuration list for PBXProject "EventBus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

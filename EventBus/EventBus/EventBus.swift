@@ -16,7 +16,7 @@ public struct EventBus {
     public static var shared = EventBus()
     /// key: target
     /// value: EventType: EventHandler
-    var subscriptions = [String: [String: Any]]()
+    var subscriptions = [ObjectIdentifier: [ObjectIdentifier: Any]]()
     let operationQueue = DispatchQueue(label: "eventbus.operationQueue", attributes: [])
     
     public func publish<E: Event>(_ event: E) {
@@ -76,12 +76,12 @@ public struct EventBus {
         }
     }
     
-    private func keyForTarget(_ target: AnyObject) -> String {
-        return addressOf(target)
+    private func keyForTarget(_ target: AnyObject) -> ObjectIdentifier {
+        return ObjectIdentifier(target)
     }
     
-    private func keyForEventType<E: Event>(_ eventType: E.Type) -> String {
-        return String(reflecting: eventType)
+    private func keyForEventType<E: Event>(_ eventType: E.Type) -> ObjectIdentifier {
+        return ObjectIdentifier(eventType)
     }
     
     /// 获取对象地址的字符串形式
